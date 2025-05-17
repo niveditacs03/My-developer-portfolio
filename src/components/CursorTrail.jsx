@@ -39,7 +39,7 @@ const CursorTrail = () => {
           const p1 = pointsRef.current[i];
           const p2 = pointsRef.current[i + 1];
           const age = (now - p1.timestamp) / 2000;
-          const alpha = 1 - age;
+          const alpha = 0.75 - age;
 
           ctx.strokeStyle = `rgba(180, 50, 50, ${alpha})`; // Soft pencil red
           ctx.lineWidth = 1.5;

@@ -3,7 +3,7 @@ import { ReactP5Wrapper } from "react-p5-wrapper";
 
 const Tile = () => {
   const sketch = (p) => {
-    let distMouse = 50;
+    let distMouse = 85;
     let size = 30;
     let cols, rows;
     let blocks = [];
@@ -16,10 +16,22 @@ const Tile = () => {
       }
 
       move() {
-        let distance = p.dist(p.mouseX, p.mouseY, this.x, this.y);
-        if (distance < distMouse) {
-          this.angle += 5;
-        }
+        if(p.pmouseX!=p.mouseX && p.pmouseY!=p.mouseY)
+          {     
+            //only if the mouse is moving ask new squares to rotate
+            let distance = p.dist(p.mouseX, p.mouseY, this.x, this.y);
+            if (distance < distMouse) {
+              this.angle += 5;
+            }
+          }
+            //if squares are already moving then keep at it till 90 turn
+            if(this.angle>0 && this.angle<90)
+            {
+              this.angle+=2
+            }
+            else{
+              this.angle=0
+            }
       }
 
       display() {
