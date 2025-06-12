@@ -21,7 +21,7 @@ const Tile = () => {
             //only if the mouse is moving ask new squares to rotate
             let distance = p.dist(p.mouseX, p.mouseY, this.x, this.y);
             if (distance < distMouse) {
-              this.angle += 5;
+              this.angle += 10;
             }
           }
             //if squares are already moving then keep at it till 90 turn

@@ -1,10 +1,15 @@
 import React from "react";
-import Dashboard from "../components/Dashboard";
+import AboutCard from "../components/AboutCard";
+import SpinningDonut from "../components/Donut";
 
 const About=()=>{
     return(
-        <div  id="about">
-         <h1>ABout me</h1>
+        <div  id="about" className="ml-13 ">
+         <h1 className="text-6xl">About me</h1>
+         <div className="flex flex-column h-100">
+            <AboutCard/>
+            <SpinningDonut/>
+         </div>
         </div>
     )
 }
