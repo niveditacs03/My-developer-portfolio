@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { CircleArrowLeft, CircleArrowRight, Link } from "lucide-react";
 import { Link as LinkIcon } from "lucide-react";
-import bloom from '../images/bloom.png'
-import spark from '../images/spark.png'
-import trade from '../images/trade.png'
-import truthify from '../images/truthify.png'
-import afreen from '../images/afreen.png'
-import keeper from '../images/keeper.png'
-import sool from '../images/sool.png'
-import todo from '../images/todo.png'
-import qr from '../images/qr.png'
+import bloom from "../images/bloom.png";
+import spark from "../images/spark.png";
+import trade from "../images/trade.png";
+import truthify from "../images/truthify.png";
+import afreen from "../images/afreen.png";
+import keeper from "../images/keeper.png";
+import sool from "../images/sool.png";
+import todo from "../images/todo.png";
+import qr from "../images/qr.png";
+import alertify from "../images/alertify.png";
+
 const slides = [
   {
     image: truthify,
@@ -18,7 +20,7 @@ const slides = [
     link: "https://github.com/niveditacs03/Truthify",
   },
   {
-    image:spark,
+    image: spark,
     heading: "SPARK",
     description: "College workshop management website",
     link: "https://github.com/ScholasticSync",
@@ -36,13 +38,13 @@ const slides = [
     link: "https://github.com/niveditacs03/Flower-shop",
   },
   {
-    image:afreen,
+    image: afreen,
     heading: "Afreen's Academy",
-    description:"Frontend of an internship work",
-    link:"https://github.com/niveditacs03/Afreen-s-Academy"
+    description: "Frontend of an internship work",
+    link: "https://github.com/niveditacs03/Afreen-s-Academy",
   },
   {
-    image: "https://source.unsplash.com/random/800x400?4",
+    image: alertify,
     heading: "Alertify",
     description: "Women's safety app",
     link: "https://github.com/niveditacs03/Alertify",
@@ -54,29 +56,30 @@ const slides = [
     link: "https://github.com/niveditacs03/TextExtractor",
   },
   {
-    image:keeper,
+    image: keeper,
     heading: "Keeper app",
-    description:"A note keeping app",
-    link:"https://github.com/niveditacs03/Notebook-app"
+    description: "A note keeping app",
+    link: "https://github.com/niveditacs03/Notebook-app",
   },
   {
-    image:sool,
-    heading:"Smart contract",
-    description:"Optimised a banking smart contract to make it  20% more optimal",
-    link:"https://github.com/niveditacs03/SmartContract"
+    image: sool,
+    heading: "Smart contract",
+    description:
+      "Optimised a banking smart contract to make it  20% more optimal",
+    link: "https://github.com/niveditacs03/SmartContract",
   },
   {
-    image:todo,
-    heading:"To do list",
-    description:"A simple to do list",
-    link:"https://github.com/niveditacs03/to-do-list"
+    image: todo,
+    heading: "To do list",
+    description: "A simple to do list",
+    link: "https://github.com/niveditacs03/to-do-list",
   },
   {
-    image:qr,
-    heading:"QR code generator",
-    description:"A site that converts anything into a QR code!",
-    link:"https://github.com/niveditacs03/QR-code-generator"
-  }
+    image: qr,
+    heading: "QR code generator",
+    description: "A site that converts anything into a QR code!",
+    link: "https://github.com/niveditacs03/QR-code-generator",
+  },
 ];
 
 const Carousel = () => {
@@ -91,7 +94,7 @@ const Carousel = () => {
   }, [index]);
 
   return (
-    <div className="bg-white p-6 rounded-xl shadow w-[1000px] border mt-10 relative overflow-hidden ml-50">
+    <div className="bg-white p-6 rounded-xl shadow w-[1000px] border mt-10 relative overflow-hidden ml-50 cursor-pointer">
       {slides.map((slide, i) => (
         <div
           key={i}
@@ -99,18 +102,22 @@ const Carousel = () => {
             i === index ? "opacity-100 block" : "opacity-0 hidden"
           }`}
         >
-          <img
-            src={slide.image}
-            alt={slide.heading}
-            className="rounded-lg w-full h-100 object-cover"
-          />
+          <a href={slide.link} target="_blank" rel="noopener noreferrer">
+            <img
+              src={slide.image}
+              alt={slide.heading}
+              className={`rounded-lg w-full h-115 ${
+                slide.heading === "Alertify" ? "object-contain" : "object-cover"
+              } cursor-pointer bg-white`}
+            />
+          </a>
+
           <div className="flex flex-row items-center gap-2 mt-4">
             <h2 className="text-2xl font-bold">{slide.heading}</h2>
             {slide.link && (
               <a
                 href={slide.link}
                 target="_blank"
-                rel="noopener noreferrer"
                 className="text-black cursor-pointer"
               >
                 <LinkIcon className="w-5 h-5" />
