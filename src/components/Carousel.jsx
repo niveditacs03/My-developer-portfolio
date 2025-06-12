@@ -1,37 +1,51 @@
 import React, { useState, useEffect } from "react";
 import { CircleArrowLeft, CircleArrowRight, Link } from "lucide-react";
 import { Link as LinkIcon } from "lucide-react";
-
+import bloom from '../images/bloom.png'
+import spark from '../images/spark.png'
+import trade from '../images/trade.png'
+import truthify from '../images/truthify.png'
+import afreen from '../images/afreen.png'
+import keeper from '../images/keeper.png'
+import sool from '../images/sool.png'
+import todo from '../images/todo.png'
+import qr from '../images/qr.png'
 const slides = [
   {
-    image: "https://source.unsplash.com/random/800x400?1",
+    image: truthify,
     heading: "Truthify",
     description: "A fake news prevention social media app",
-    link: "https://github.com/niveditacs03/TextExtractor",
+    link: "https://github.com/niveditacs03/Truthify",
   },
   {
-    image: "https://source.unsplash.com/random/800x400?2",
+    image:spark,
     heading: "SPARK",
     description: "College workshop management website",
-    link: "https://github.com/niveditacs03/TextExtractor",
+    link: "https://github.com/ScholasticSync",
   },
   {
-    image: "https://source.unsplash.com/random/800x400?3",
+    image: trade,
     heading: "Trading Simulator",
     description: "A trading simulator",
-    link: "https://github.com/niveditacs03/TextExtractor",
+    link: "https://github.com/niveditacs03/trading-simulator",
+  },
+  {
+    image: bloom,
+    heading: "Bloom",
+    description: "An online NFT flower shop",
+    link: "https://github.com/niveditacs03/Flower-shop",
+  },
+  {
+    image:afreen,
+    heading: "Afreen's Academy",
+    description:"Frontend of an internship work",
+    link:"https://github.com/niveditacs03/Afreen-s-Academy"
   },
   {
     image: "https://source.unsplash.com/random/800x400?4",
     heading: "Alertify",
     description: "Women's safety app",
-    link: "https://github.com/niveditacs03/TextExtractor",
-  },
-  {
-    image: "https://source.unsplash.com/random/800x400?5",
-    heading: "Bloom",
-    description: "An online NFT flower shop",
-    link: "https://github.com/niveditacs03/TextExtractor",
+    link: "https://github.com/niveditacs03/Alertify",
   },
   {
     image: "https://source.unsplash.com/random/800x400?6",
@@ -39,6 +53,30 @@ const slides = [
     description: "Text extraction from images",
     link: "https://github.com/niveditacs03/TextExtractor",
   },
+  {
+    image:keeper,
+    heading: "Keeper app",
+    description:"A note keeping app",
+    link:"https://github.com/niveditacs03/Notebook-app"
+  },
+  {
+    image:sool,
+    heading:"Smart contract",
+    description:"Optimised a banking smart contract to make it  20% more optimal",
+    link:"https://github.com/niveditacs03/SmartContract"
+  },
+  {
+    image:todo,
+    heading:"To do list",
+    description:"A simple to do list",
+    link:"https://github.com/niveditacs03/to-do-list"
+  },
+  {
+    image:qr,
+    heading:"QR code generator",
+    description:"A site that converts anything into a QR code!",
+    link:"https://github.com/niveditacs03/QR-code-generator"
+  }
 ];
 
 const Carousel = () => {
