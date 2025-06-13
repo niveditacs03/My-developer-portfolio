@@ -11,6 +11,7 @@ import sool from "../images/sool.png";
 import todo from "../images/todo.png";
 import qr from "../images/qr.png";
 import alertify from "../images/alertify.png";
+import drums from '../images/drums.png'
 
 const slides = [
   {
@@ -35,13 +36,13 @@ const slides = [
     image: bloom,
     heading: "Bloom",
     description: "An online NFT flower shop",
-    link: "https://github.com/niveditacs03/Flower-shop",
+    link: "https://flower-shop-internship.vercel.app/",
   },
   {
     image: afreen,
     heading: "Afreen's Academy",
-    description: "Frontend of an internship work",
-    link: "https://github.com/niveditacs03/Afreen-s-Academy",
+    description: "Frontend of an internship work, I made the home page and the about me page.",
+    link: "https://afreen-s-academy.vercel.app/",
   },
   {
     image: alertify,
@@ -50,16 +51,16 @@ const slides = [
     link: "https://github.com/niveditacs03/Alertify",
   },
   {
-    image: "https://source.unsplash.com/random/800x400?6",
-    heading: "Textractor",
-    description: "Text extraction from images",
-    link: "https://github.com/niveditacs03/TextExtractor",
+    image: drums,
+    heading: "Virtual Beats",
+    description: "An online set of drums",
+    link: "https://virtual-beats.vercel.app/",
   },
   {
     image: keeper,
     heading: "Keeper app",
     description: "A note keeping app",
-    link: "https://github.com/niveditacs03/Notebook-app",
+    link: "https://notebook-app-smoky.vercel.app/",
   },
   {
     image: sool,
@@ -72,13 +73,13 @@ const slides = [
     image: todo,
     heading: "To do list",
     description: "A simple to do list",
-    link: "https://github.com/niveditacs03/to-do-list",
+    link: "https://to-do-list-six-virid-65.vercel.app/",
   },
   {
     image: qr,
     heading: "QR code generator",
     description: "A site that converts anything into a QR code!",
-    link: "https://github.com/niveditacs03/QR-code-generator",
+    link: "https://qr-code-generator-azure-mu.vercel.app/",
   },
 ];
 
