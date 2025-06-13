@@ -11,7 +11,7 @@ const About = () => {
       ([entry]) => {
         if (entry.isIntersecting) setShouldType(true);
       },
-      { threshold: 0.5 }
+      { threshold: 0.8 }
     );
 
     if (headingRef.current) observer.observe(headingRef.current);
@@ -27,7 +27,7 @@ const About = () => {
           <span className="invisible">Abbout me</span>
         )}
       </h1>
-      <div className="flex flex-column h-auto">
+      <div className="flex flex-column h-auto mt-4">
         <AboutCard />
       </div>
     </div>

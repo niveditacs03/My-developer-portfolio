@@ -11,7 +11,7 @@ const Projects = () => {
       ([entry]) => {
         if (entry.isIntersecting) setShouldType(true);
       },
-      { threshold: 0.5 }
+      { threshold: 1 }
     );
 
     if (headingRef.current) observer.observe(headingRef.current);
@@ -19,7 +19,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <div id="projects" className="ml-13 mt-30 ">
+    <div id="projects" className="ml-13 mt-50 ">
       <h1 ref={headingRef} className="text-6xl">
         {shouldType ? (
           <Typewriter text="Prrojects" speed={300} />
