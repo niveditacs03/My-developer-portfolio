@@ -11,8 +11,8 @@ import sool from "../images/sool.png";
 import todo from "../images/todo.png";
 import qr from "../images/qr.png";
 import alertify from "../images/alertify.png";
-import drums from '../images/drums.png'
-
+import drums from "../images/drums.png";
+import { AnimatePresence, motion } from "framer-motion";
 const slides = [
   {
     image: truthify,
@@ -41,7 +41,8 @@ const slides = [
   {
     image: afreen,
     heading: "Afreen's Academy",
-    description: "Frontend of an internship work, I made the home page and the about me page.",
+    description:
+      "Frontend of an internship work, I made the home page and the about me page.",
     link: "https://afreen-s-academy.vercel.app/",
   },
   {
@@ -95,29 +96,45 @@ const Carousel = () => {
   }, [index]);
 
   return (
-    <div className="bg-white p-6 rounded-xl shadow w-[1000px] border mt-10 relative overflow-hidden ml-50 cursor-pointer">
-      {slides.map((slide, i) => (
-        <div
-          key={i}
-          className={`transition-opacity duration-500 ease-in-out ${
-            i === index ? "opacity-100 block" : "opacity-0 hidden"
-          }`}
-        >
-          <a href={slide.link} target="_blank" rel="noopener noreferrer">
-            <img
-              src={slide.image}
-              alt={slide.heading}
-              className={`rounded-lg w-full h-115 ${
-                slide.heading === "Alertify" ? "object-contain" : "object-cover"
-              } cursor-pointer bg-white`}
-            />
+    <div>
+      <motion.section
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
+        <div className="bg-white p-6 rounded-xl shadow w-[1000px] border mt-10 relative overflow-hidden mx-auto">
+          <a
+            href={slides[index].link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: 100 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -100 }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
+              >
+                <img
+                  src={slides[index].image}
+                  alt={slides[index].heading}
+                  className={`rounded-lg w-full h-115 ${
+                    slides[index].heading === "Alertify"
+                      ? "object-contain"
+                      : "object-cover"
+                  } cursor-pointer bg-white`}
+                />
+              </motion.div>
+            </AnimatePresence>
           </a>
 
           <div className="flex flex-row items-center gap-2 mt-4">
-            <h2 className="text-2xl font-bold">{slide.heading}</h2>
-            {slide.link && (
+            <h2 className="text-2xl font-bold">{slides[index].heading}</h2>
+            {slides[index].link && (
               <a
-                href={slide.link}
+                href={slides[index].link}
                 target="_blank"
                 className="text-black cursor-pointer"
               >
@@ -126,33 +143,33 @@ const Carousel = () => {
             )}
           </div>
 
-          <p className="text-gray-600">{slide.description}</p>
+          <p className="text-gray-600">{slides[index].description}</p>
+
+          <button
+            onClick={prevSlide}
+            className="absolute top-1/2 left-4 -translate-y-1/2 bg-white rounded-full p-2 shadow hover:bg-gray-100 z-10"
+          >
+            <CircleArrowLeft />
+          </button>
+          <button
+            onClick={nextSlide}
+            className="absolute top-1/2 right-4 -translate-y-1/2 bg-white rounded-full p-2 shadow hover:bg-gray-100 z-10"
+          >
+            <CircleArrowRight />
+          </button>
+
+          <div className="flex justify-center gap-2 mt-4">
+            {slides.map((_, i) => (
+              <div
+                key={i}
+                className={`h-2 w-2 rounded-full ${
+                  i === index ? "bg-blue-500" : "bg-gray-300"
+                }`}
+              ></div>
+            ))}
+          </div>
         </div>
-      ))}
-
-      <button
-        onClick={prevSlide}
-        className="absolute top-1/2 left-4 -translate-y-1/2 bg-white rounded-full p-2 shadow hover:bg-gray-100"
-      >
-        <CircleArrowLeft />
-      </button>
-      <button
-        onClick={nextSlide}
-        className="absolute top-1/2 right-4 -translate-y-1/2 bg-white rounded-full p-2 shadow hover:bg-gray-100"
-      >
-        <CircleArrowRight />
-      </button>
-
-      <div className="flex justify-center gap-2 mt-4">
-        {slides.map((_, i) => (
-          <div
-            key={i}
-            className={`h-2 w-2 rounded-full ${
-              i === index ? "bg-blue-500" : "bg-gray-300"
-            }`}
-          ></div>
-        ))}
-      </div>
+      </motion.section>
     </div>
   );
 };

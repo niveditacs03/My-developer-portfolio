@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import AboutCard from "../components/AboutCard";
 import Typewriter from "../components/TypeWriter";
-
+import { motion } from "framer-motion";
 const About = () => {
   const headingRef = useRef(null);
   const [shouldType, setShouldType] = useState(false);
@@ -20,6 +20,13 @@ const About = () => {
 
   return (
     <div id="about" className="ml-13 -mt-30">
+      <motion.section
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+    >
+
       <h1 ref={headingRef} className="text-6xl">
         {shouldType ? (
           <Typewriter text="Abbout me" speed={300} />
@@ -30,6 +37,7 @@ const About = () => {
       <div className="flex flex-column h-auto mt-4">
         <AboutCard />
       </div>
+      </motion.section>
     </div>
   );
 };

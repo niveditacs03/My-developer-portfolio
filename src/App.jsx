@@ -8,7 +8,14 @@ import Projects from './pages/Projects';
 
 export default function App() {
   return (
-    <div className='max-w-screen'>
+  <div
+  style={{
+  backgroundImage: "url('/images/1.webp')",
+  backgroundSize: "cover",
+  backgroundRepeat: "no-repeat",
+  backgroundPosition: "center"
+}}
+>
       <BrowserRouter>
         <Routes>
             <Route path="/" element={<Home />} />

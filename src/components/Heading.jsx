@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 const Heading = ({
   firstLine = "Hi there!",
   secondLine = "I'm Nivedita",
-  summaryText = "A passionate problem solver.",
+  summaryText = "I turn ideas into reality.",
 }) => {
   const [firstText, setFirstText] = useState("");
   const [secondText, setSecondText] = useState("");
