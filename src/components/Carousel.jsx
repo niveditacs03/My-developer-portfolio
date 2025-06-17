@@ -86,9 +86,17 @@ const slides = [
 
 const Carousel = () => {
   const [index, setIndex] = useState(0);
+  const [direction, setDirection] = useState(0);
 
-  const prevSlide = () => setIndex((index - 1 + slides.length) % slides.length);
-  const nextSlide = () => setIndex((index + 1) % slides.length);
+  const prevSlide = () => {
+    setDirection(-1);
+    setIndex((prev) => (prev - 1 + slides.length) % slides.length);
+  };
+
+  const nextSlide = () => {
+    setDirection(1);
+    setIndex((prev) => (prev + 1) % slides.length);
+  };
 
   useEffect(() => {
     const timer = setInterval(() => nextSlide(), 5000);
@@ -109,13 +117,13 @@ const Carousel = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <AnimatePresence mode="wait">
+            <AnimatePresence mode="wait" initial={false}>
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: 100 }}
+                initial={{ opacity: 0.7, x: direction > 0 ? 2 : -2 }}
                 animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -100 }}
-                transition={{ duration: 0.4, ease: "easeInOut" }}
+                exit={{ opacity: 0.2, x: direction > 0 ? -1 : 1 }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
               >
                 <img
                   src={slides[index].image}
