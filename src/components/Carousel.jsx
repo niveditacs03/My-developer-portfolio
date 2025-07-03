@@ -12,8 +12,15 @@ import todo from "../images/todo.png";
 import qr from "../images/qr.png";
 import alertify from "../images/alertify.png";
 import drums from "../images/drums.png";
+import terra from "../images/terra.png"
 import { AnimatePresence, motion } from "framer-motion";
 const slides = [
+  { 
+    image: terra,
+    heading: "TerraIQ",
+    description: "A dynamic risk prediction system for insurance companies using real-time weather data",
+    link: "https://github.com/niveditacs03/TerraIQ",
+  },
   {
     image: truthify,
     heading: "Truthify",
