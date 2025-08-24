@@ -30,6 +30,7 @@ const AboutCard = () => {
       </div>
        <h2 className="ml-5 text-2xl font-semibold mb-2 mt-3">Experience</h2>
        <ul className="list-disc space-y-1 text-xl ml-15">
+          <li>Research intern @ TCS AI <i className="text-lg">(July 2025-Present)</i></li>
           <li>Software-AI intern @ Techvantage.AI <i className="text-lg">(May 2025 - Current)</i></li>
           <li>Summer research intern @ NIT-Trichy <i className="text-lg">(June 2024-August 2024</i>)</li>
         </ul>

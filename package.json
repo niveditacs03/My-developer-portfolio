@@ -15,11 +15,14 @@
     "@mynaui/icons-react": "^0.3.8",
     "@radix-ui/react-slot": "^1.2.3",
     "@tailwindcss/vite": "^4.1.7",
+    "cors": "^2.8.5",
     "embla-carousel-react": "^8.6.0",
+    "express": "^5.1.0",
     "framer-motion": "^12.18.1",
     "lucide": "^0.514.0",
     "lucide-react": "^0.514.0",
     "next-themes": "^0.4.6",
+    "nodemailer": "^7.0.5",
     "path": "^0.12.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -45,5 +48,18 @@
     "tailwindcss": "^4.1.7",
     "vite": "^6.3.1",
     "vite-tsconfig-paths": "^5.1.4"
-  }
+  },
+  "description": "Link: https://nivedita-five.vercel.app/",
+  "main": "eslint.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niveditacs03/My-developer-portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/niveditacs03/My-developer-portfolio/issues"
+  },
+  "homepage": "https://github.com/niveditacs03/My-developer-portfolio#readme"
 }

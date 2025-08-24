@@ -10,11 +10,11 @@ export default function App() {
   return (
   <div
   style={{
-  backgroundImage: "url('/images/1.webp')",
-  backgroundSize: "cover",
-  backgroundRepeat: "no-repeat",
-  backgroundPosition: "center"
-}}
+        backgroundImage: "url('/images/1.webp')",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+      }}
 >
       <BrowserRouter>
         <Routes>
@@ -24,6 +24,7 @@ export default function App() {
             <Route path="/#projects" element={<Projects />} />
         </Routes>
       </BrowserRouter>
+
     </div>
   );
 }

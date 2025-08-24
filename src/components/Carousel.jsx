@@ -12,7 +12,8 @@ import todo from "../images/todo.png";
 import qr from "../images/qr.png";
 import alertify from "../images/alertify.png";
 import drums from "../images/drums.png";
-import terra from "../images/terra.png"
+import terra from "../images/terra.png";
+import bunny from "../images/bunny.png"
 import { AnimatePresence, motion } from "framer-motion";
 const slides = [
   { 
@@ -21,23 +22,30 @@ const slides = [
     description: "A dynamic risk prediction system for insurance companies using real-time weather data",
     link: "https://github.com/niveditacs03/TerraIQ",
   },
-  {
-    image: truthify,
-    heading: "Truthify",
-    description: "A fake news prevention social media app",
-    link: "https://github.com/niveditacs03/Truthify",
-  },
+
   {
     image: spark,
     heading: "SPARK",
-    description: "College workshop management website",
+    description: "College workshop and event management website",
     link: "https://github.com/ScholasticSync",
   },
   {
     image: trade,
     heading: "Trading Simulator",
-    description: "A trading simulator",
+    description: "A real-time maker-taker and slippage prediction model powered by live websocket data",
     link: "https://github.com/niveditacs03/trading-simulator",
+  },
+  {
+    image: alertify,
+    heading: "Alertify",
+    description: "Women's safety app with live location tracking and emergency contact button",
+    link: "https://github.com/niveditacs03/Alertify",
+  },
+  {
+    image:bunny,
+    heading:"Code Bunny",
+    description:"A personalised learning recommender for Leetcode",
+    link:'https://github.com/niveditacs03/rabbitai'
   },
   {
     image: bloom,
@@ -49,32 +57,32 @@ const slides = [
     image: afreen,
     heading: "Afreen's Academy",
     description:
-      "Frontend of an internship work, I made the home page and the about me page.",
+      "Created the frontend for the Home and About pages of a medical exam prep platform during my internship",
     link: "https://afreen-s-academy.vercel.app/",
   },
-  {
-    image: alertify,
-    heading: "Alertify",
-    description: "Women's safety app",
-    link: "https://github.com/niveditacs03/Alertify",
+   {
+    image: truthify,
+    heading: "Truthify",
+    description: "A fake news prevention social media app (Work in progress)",
+    link: "https://github.com/niveditacs03/Truthify",
   },
   {
     image: drums,
     heading: "Virtual Beats",
-    description: "An online set of drums",
+    description: "An online set of drums for anyone, anyday",
     link: "https://virtual-beats.vercel.app/",
   },
   {
     image: keeper,
     heading: "Keeper app",
-    description: "A note keeping app",
+    description: "A simple note keeping app",
     link: "https://notebook-app-smoky.vercel.app/",
   },
   {
     image: sool,
     heading: "Smart contract",
     description:
-      "Optimised a banking smart contract to make it  20% more optimal",
+      "A smart contract for a banking software which was optimised by 20%",
     link: "https://github.com/niveditacs03/SmartContract",
   },
   {
