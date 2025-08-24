@@ -45,7 +45,7 @@ const slides = [
     image:bunny,
     heading:"Code Bunny",
     description:"A personalised learning recommender for Leetcode",
-    link:'https://github.com/niveditacs03/rabbitai'
+    link:'https://rabbitai-1.onrender.com/'
   },
   {
     image: bloom,
